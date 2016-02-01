@@ -1,0 +1,1 @@
+{"required":1,"groups":[{"required":2,"restraints":[{"type":"residue","dmax":2.5,"dmin":1,"rec_chain":"A165","lig_chain":"A65"},{"type":"residue","dmax":2.5,"dmin":1,"rec_chain":"A178","lig_chain":"A66"},{"type":"residue","dmax":4,"dmin":1,"rec_chain":"A173","lig_chain":"A113"}]}]}

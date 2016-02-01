@@ -10,10 +10,10 @@ minutes: 1h30
 
 > ## Learning Objectives
 >
-> * Introduce Chimera's basic features
-> * Upload a structure (a ClusPro model)
-> * Select one or more residues
-> * Calculate atomic distances
+> * Learners can describe Chimera's basic features
+> * Learners can upload a structure (e.g. a ClusPro model)
+> * Learners can select one or more residues
+> * Learners can calculate atomic distances
 
 ------------
 
