@@ -1,21 +1,23 @@
 ---
+
 layout: topic
 title: Protein-protein interaction prediction using docking
 author: Allegra Via  
 based on: a practical by D. Raimondo
 minutes: 60 (excluding ClusPro run)
-ClusPro run: up to a few hours
+ClusPro run: up to a few hours  
+
 ---
 
-> Unless you can organise your teaching with a long break between the ClusPro job submission and the analysis of results, I strongly suggest you generate the solutions in advance and provide them to the students. In order to use ClusPro, you can generate an account (advised). However, you can also run a job without being registered. The procedure to request an account is described in this tutorial.
+> Unless you can organise your teaching with a long break between the ClusPro job submission and the analysis of results, I strongly suggest that you generate the solutions in advance and provide them to the students. In order to use ClusPro, you can generate an account (advised). However, you can also run a job without being registered. The procedure to request an account is described in this tutorial.
 
 ---
 > ## Learning Objectives
 >
-> * Introduce the biological context of the MKK7-Gadd45B interaction
-> * Identification of restraints to limit docking conformations
-> * Predict the MKK7-Gadd45B complex using ClusPro
-> * Explore ClusPro results
+> * Learners can describe the biological context of the MKK7-Gadd45B interaction
+> * Learners can identify the restraints to limit docking conformations
+> * Learners can predict the MKK7-Gadd45B complex using ClusPro
+> * Learners can explore ClusPro results
 
 
 # Protein-protein interaction prediction using docking

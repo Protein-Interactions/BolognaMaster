@@ -1,4 +1,4 @@
-##Features of protein-ligand interactions
+##Features of protein-ligand interactions identified in group work
 
 ######International master in Bioinformatics, Bologna, AA 2015/2016
 
