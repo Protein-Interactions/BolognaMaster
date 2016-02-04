@@ -53,7 +53,7 @@ Go to the ```detailed view``` of the ABL1-HUMAN (P00519) / P41 (EBI-7094147) int
 
 **Q8**: Which are the Interaction Parameters associated to this interaction?
 
-Go back to the interaction list of the previous search and go to the detailed view of the ABL1_HUMAN (P00519) / P41 (EBI-7094147)interaction that has **X-ray crystallography** as “Interaction detection Method".
+Go back to the interaction list of the previous search and go to the detailed view of the ABL1_HUMAN (P00519) / P41 (EBI-7094147) interaction that has **X-ray crystallography** as “Interaction detection Method".
 
 **Q9**: Which are the "Experimental Features" of this interaction for both interactors?  Which binding site and which mutation(s)?
 
