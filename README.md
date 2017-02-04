@@ -1,1 +1,1 @@
-# BolognaMaster2016
+# International Master in Bioinformatics - University of Bologna
