@@ -1,10 +1,8 @@
 ---
-layout: topic
 title: Graphical analysis of ClusPro docking results using UCSF Chimera
 authors:  Allegra Via 
 based on: UCSF Chimera Getting Started Tutorial
 minutes: 1h30
-
 ---
 
 ------------
@@ -20,7 +18,7 @@ minutes: 1h30
 
 This tutorial is adapted from the [UCSF Chimera - Getting Started Tutorial](https://www.cgl.ucsf.edu/Outreach/Tutorials/GettingStarted.html)
 
-#Getting started
+# Getting started
 You can interact with Chimera using menus and/or commands. The basic features of Chimera are available either way, but not all command functions are available in menus or graphical interfaces, and not all menu or graphical interface functions are available in commands. Thus, it is useful to become familiar with both ways of interacting with Chimera.
 
 Start Chimera by clicking or doubleclicking the Chimera icon (depending on its location). Typically, this icon will be present on the desktop. The Chimera executable can also be run from its installation location.
@@ -29,7 +27,7 @@ A splash screen will appear, to be replaced in a few seconds by the main Chimera
 
 <img src= "img/chimera_table_1.jpg" width="50%">
 
-##Opening a structure
+## Opening a structure
 
 Now open a structure. Choose 
 
@@ -69,7 +67,7 @@ When the mouse focus is in the graphics window (you may need to click into it if
 
 You can see from the balloons that this structure contains two peptide chains, A and "No ID", and no water (HOH residues).
 
-##Selection with the mouse
+## Selection with the mouse
 
 In combination with modifier keys, the mouse buttons have additional functions. By default, picking from the screen (a type of selection) is done by Ctrl-clicking an atom or bond with the left mouse button, Btn1. You can also drag out a selection area with Ctrl-Btn1 (sweep out an area before releasing). Shift-Ctrl-Btn1 adds to or toggles an existing selection. The selection is outlined in green, and placing the mouse cursor over the green magnifying glass icon near the bottom right corner of the window reports what is selected in a pop-up “balloon.”
 

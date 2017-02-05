@@ -5,37 +5,38 @@
 
 **Protein-Protein Interactions**
 
-general structure:
-1 we havea core region with higher hydrophobicity with tightly packed residues with high hydrophobicity.
-We have edged or rim regions.
-In lateral region there are more polar res and a polar behaviour and also water binded.
-Not easy to find the border.
-PPI have a low number of hotspots.
-Geometry is quite important because generally are more often flat or convex.
-And the res occurrence is quite similar of the core of the protein.
-The factor that regulates: concentration of the protein, protein affinity, presence of other protein. Electric field around protein. PTM, structural domains involved.
-Examples:
+General structure of protein-protein interfaces:  
+There is a core region with tightly packed residues with high hydrophobicity.
+There are edge or rim regions.
+In lateral region there are more polar residues and a polar behaviour and also water bound residues.
+Not easy to identify the exact border.
+PPI interfaces have hotspots, i.e. residues or regions with low energy of binding (and, therefore, "responsible" for the binding).
+Geometry is quite important because generally PPI interfaces tend to be flat or convex.
+The residue composition is quite similar to that of the core of the protein.
+Factors regulating PPIs: concentration of the proteins, protein affinity, presence of the interacting proteins in the same cellular compartment. Electric field around proteins. PTM, structural domains involved.
+Examples:  
 
-actine-myosine interactions in muscle contractions
-p53
-cytocrome
-Antibody/antibody sometimes is PPI or other kind of molecules.
+* actine-myosine interactions in muscle contractions
+p53  
+* cytocrome  
+* Antibody/antibody sometimes is PPI or other kind of molecules
 
+What would you do if you had to design an algorithm to predict PPI?
+Tips: 
 
-If you have to design an algorithm to predict PPI?
-Find hydrophobic spots in structure.
-Looking for residues on the surface. And look for neighbors res. 
-Using HMM we can build a model considering the rims and the core.
-Graph could help identify clusters.
+* Find hydrophobic spots on the protein surface
+* Looking for residues on the surface. And look for neighbors res. 
+* Using HMM we can build a model considering the rims and the core.
+* Graphs could help identify clusters.
 
 
 **Protein small-ligands interations**
 
-small-deeper pockets
-inhibitors or cofactors
-can be formed both stable and transient intercations.
-Ligands can be elements, ions or small molecules in general.
-Small means not protein,not DNA/RNA not macromolecules.
+* small-deeper pockets
+* inhibitors or cofactors 
+* can be formed both stable and transient interations
+* Ligands can be elements, ions or small molecules in general
+* Small means not protein,not DNA/RNA not macromolecules.
 Examples: 
 cytochrome c stable linked with – heme group in cellular respiration ( same as the one found in hemoglobin with a different function)
 penicillin binds irreversibly D-D-transpeptidase and prevents bacterial wall to maintain itself

@@ -1,0 +1,1 @@
+{"required":1,"groups":[{"required":2,"restraints":[{"type":"residue","dmax":5,"dmin":1,"rec_chain":"A","rec_resid":"165","lig_chain":"A","lig_resid":"65"},{"type":"residue","dmax":5,"dmin":1,"rec_chain":"A","rec_resid":"178","lig_chain":"A","lig_resid":"66"},{"type":"residue","dmax":5,"dmin":1,"rec_chain":"A","rec_resid":"173","lig_chain":"A","lig_resid":"113"}]}]}
