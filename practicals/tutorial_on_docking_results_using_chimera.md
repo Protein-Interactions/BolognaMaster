@@ -188,6 +188,24 @@ Turn off residue labels, hide ribbon, display all atoms, and color by element:
 
 The by element coloring is the same as by heteroatom except it also color-codes carbons (gray).
 
+##Calculating atomic distances
+
+Go to 
+
+```
+Tools > Structure analysis > distances
+```
+
+This opens the ```Distances``` panel of ```Structure Measurements``` which is a table of distance monitors (measurements that update if there are changes). Distance monitors are saved in sessions. 
+
+Distance monitors can be created in several ways:
+
+1) Selecting exactly two atoms, then clicking the Create button on the dialog. With default mouse settings, two atoms can be picked (selected from the graphics window) by Ctrl-clicking the first and Shift-Ctrl-clicking the second.<br>
+2) Doubleclick-picking an atom when one other atom is already selected, then choosing Show Distance from the resulting context menu.<br>
+3) Doubleclick-picking an atom when 0 or >3 other atoms are already selected, then choosing Show Distances to Nearby Residues from the resulting context menu.<br>
+4) Using the distance command (see below).
+
+
 ## Models and model status
 
 Generally, each file of coordinates opened in Chimera becomes a model with an associated model ID number. Models are assigned successive numbers starting with 0. The Model Panel lists the current models and enables many operations upon them. Open this tool with *Tools→General Controls→Model Panel*.
@@ -285,7 +303,97 @@ Command: display
 Command: ~display
 ```
 
-The Chimera Quick Reference Guide lists all of the commands and gives some examples of atom specification. It can be accessed by choosing Help→Tutorials from the Chimera menu and clicking the “Chimera Quick Reference Guide” link.
+The Chimera Quick Reference Guide lists all of the commands and gives some examples of atom specification. It can be accessed by choosing Help→Tutorials from the Chimera menu and clicking the “Chimera Quick Reference Guide” link. You can also find it here: [Chimera Quick Reference Guide](./biblio/chimera_quickref.pdf).
+
+Here are some specification symbols:
+
+
+Symbol|Function|Usage
+------|--------|-----
+\#     |model number|#model(integer)
+\#.    |submodel number|#.submodel(integer)
+:      |residue        |: residue (name or number)
+::     |residue name   |:: residue
+:.     |chain ID       |:.chain
+@      |atom name      |@atom
+-      |range          |specifies a range of models, submodels, or residues
+,      |name separator |separates models or residues, ranges of models or residues, or names of atoms.
+
+Atom types: ca, n, o, cb
+
+###Examples
+
+all models:
+
+```
+# 
+```
+model 0:
+
+```
+#0
+```
+
+residues 45-83 and 90-98 in model 3:
+
+```
+\#3:45-83, 90-98
+```
+
+lysine and arginine residues:
+
+```
+:lys,arg
+```
+
+alpha carbos in residues 12 and 14:
+
+```
+:12,14@ca
+```
+
+all atoms in residue 12 and the alpha carbon in residue 14:
+
+```
+:12:14@ca
+```
+
+peptide backbone in chain A:
+
+```
+:.A@ca,c,n,o
+```
+
+residue 50 in chain B and all residues in chain D:
+
+```
+:50.B,.D
+```
+
+residues 12-15 in all chains (excepr het/water), 26-28 in chain A, and 45 in chain B:
+
+```
+:12-15,26-28.a,45.b
+```
+
+any/all residues automatically classified as ligand:
+
+```
+ligand
+```
+
+all sulfur and iron atoms:
+
+```
+S|Fe
+```
+
+asparagine residues in helices:
+
+```
+:asn&helix
+```
+
 
 Many other types of specifications can be used, including element symbols and built-in classifications such as solvent (notice that docking models don't have solvent, therefore in this case the command will have no effect):
 
@@ -300,6 +408,7 @@ The command help can be used to show the manual page for any command:
 ```
 Command: help color
 ```
+
 As explained in the manual page, the color command also allows coloring only certain representations.
 
 For example, “,a” in the following means atoms only (not ribbons, surfaces, etc.):
@@ -335,17 +444,43 @@ Command: disp sel
 
 The following command can be used to promote the selection to the entire residues:
 
+```
 Command: select up
-(The keyboard up arrow ↑↑ also broadens a selection, but you may need to click into the graphics window
-first to use that approach.) Show only the selected atoms:
+```
+
+(The keyboard up arrow ↑↑ also broadens a selection, but you may need to first click into the graphics window to use that approach). Show only the selected atoms:
+
+```
 Command: show sel
+
+```
 Clear the selection by Ctrl-clicking in empty space, as if picking “nothing.”
 Turn off residue labels, hide ribbon, display all atoms, and color by element:
+
+```
 Command: ~rlab
 Command: ~ribbon
 Command: disp
 Command: col byelement
-Coloring byelement is the same as byhet except it also color-codes carbons (gray).
+Coloring by element is the same as byhet except it also color-codes carbons (gray).
+```
+
+
+# Calculatng distances
+
+If you uploaded the ligand as model 0 and the receptor as model 1 and want to calculate the distance between atom OE2 of residue 65 of the ligand and atom HZ3 of residue 165 of the receptor, the command is:
+
+```
+distance #0:65@OE2 #1:165@HZ3
+```
+
+If you want to display the two residues in order to identify atoms' names (by hovering the cursor over atoms to see information in a pop-up window):
+
+```
+display #0:65
+display #1:165
+
+```
 
 # Models and model status
 Generally, each file of coordinates opened in Chimera becomes a model with an associated model ID number. Models are assigned successive numbers starting with 0.
