@@ -19,6 +19,18 @@ minutes: 45
 
 ------------
 
+> ## Learning Outcomes
+> By the end of this lesson, the learner will be able to:
+> * List and discuss the Homology modelling principles
+> * Describe the tools for homology modelling available at https://toolkit.tuebingen.mpg.de/#/
+> * Justify the choice of a given template over the others
+> * Build the homology model of Gadd45β using HHPred 
+> * Do model quality assessment using QMEAN
+> * Point to relevant information on how to get help.
+
+------------
+
+
 In this tutorial we will see how to build the homology model of Gadd45β. 
 
 Let's start with some introduction on the three-dimensional (3D) structure of proteins. 
