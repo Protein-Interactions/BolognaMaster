@@ -215,8 +215,17 @@ Then, Submit your Job.
 After downloading it, open the file with your favourite Text Editor (gedit, vim, pico, nano, etc) and take a few minutes to inspect the file.
 Before going back to the prediction of the Gadd45β-MKK7 complex, we will spend a few minutes to check the quality of our model. 
 
-# Model quality assessment
-Go to the [QMEAN Server for Model Quality Estimation](http://swissmodel.expasy.org/qmean/cgi/index.cgi), provide a name for your project (I suggest gadd45B_model_quality) and upload the gadd45B_model.pdb file and submit your job. Notice that the quality assessment may take some time. The QMEAN output is described below. Try to find out what is the quality of your model without reading this tutorial but using the help pages provided on the QMEAN website.
+# Model quality assessment with QMEAN
+
+In protein structure prediction, a considerable number of alternative models are usually produced from which subsequently the final model has to be selected. Thus, a scoring function for the identification of the best model within an ensemble of alternative models is a key component of most protein structure prediction pipelines. QMEAN, which stands for Qualitative Model Energy ANalysis, is a composite scoring function **describing the major geometrical aspects of protein structures**. Five different structural descriptors are used. 
+* The local geometry is analyzed by a new kind of torsion angle potential over three consecutive amino acids. 
+* A secondary structure-specific distance-dependent pairwise residue-level potential is used to assess long-range interactions. 
+* A solvation potential describes the burial status of the residues. 
+* Two simple terms describing the agreement of predicted and calculated secondary structure and solvent accessibility, respectively, are also included. 
+QMEAN was tested on several standard decoy sets including a molecular dynamics simulation decoy set as well as on a comprehensive data set of totally 22,420 models from server predictions for the 95 targets of CASP7. In a comparison to five well-established model quality assessment programs, QMEAN shows a statistically significant improvement over nearly all quality measures describing the ability of the scoring function to identify the native structure and to discriminate good from bad models. The three-residue torsion angle potential turned out to be very effective in recognizing the native fold (Benkert P, Tosatto SC, Schomburg D. Proteins. 2008 Apr;71(1):261-77).
+
+
+Go to the help page of the [QMEAN Server for Model Quality Estimation](http://swissmodel.expasy.org/qmean/cgi/index.cgi) and carefully read it. Then go to the [Submit new](http://swissmodel.expasy.org/qmean) page, provide a name for your project (I suggest gadd45B_model_quality) and upload the gadd45B_model.pdb file and submit your job. Notice that the quality assessment may take some time. The QMEAN output is described below. Try to find out what is the quality of your model without reading this tutorial but using the help pages provided on the QMEAN website.
 
 
 <img src= "img/qmean_1.png" width="50%"><img src= "img/qmean_2.png" width="50%">
