@@ -204,7 +204,7 @@ You will end up in the "Modeller" page. The target-template alignment will appea
 <img src= "img/target_template_alignment.png" width="50%">
 
 
-Notice that, if you want to run a local version of Modeller, you have to copy this alignment and paste it to a local text file with .ali extension. This is NOT what we are going to do here. Here, we will use the Modeller installation provided by The Bioinformatics Toolkit. Therefore, check the options and insert a MODELLER-key (you can use "modeliranje") and a name for your Job in the Job-ID text box (I suggest "gadd45B_model" or something similar). 
+Notice that, if you want to run a local version of Modeller, you have to copy this alignment and paste it to a local text file with .ali extension. This is NOT what we are going to do here. Here, we will use the Modeller installation provided by The Bioinformatics Toolkit. Therefore, check the options and insert a MODELLER-key (you can use "MODELIRANJE") and a name for your Job in the Job-ID text box (I suggest "gadd45B_model" or something similar). 
 
 <img src= "img/hhpred_modeller.png" width="50%">
 
