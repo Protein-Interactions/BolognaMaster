@@ -66,7 +66,7 @@ MKK7 UniprotKB AC: O14733
 ```
 
 ### 1. Build the homology model of Gadd45β
-At the time of writing, the crystal structure of Gadd45β is not available in the PDB. Therefore, we will use a homology model of Gadd45β. If you want to learn how to **build the homology model** of Gadd45β using HHPred (http://toolkit.tuebingen.mpg.de/hhpred), an online resource for homology modelling and more, you can follow the step-by-step [tutorial on homology modelling](tutorial_on_homology_modelling). For the purposes of this tutorial, you can download the model provided in the [pdb](https://github.com/aidanbudd/ppisnd/blob/4eb1724d5d9ce5dbd184288b0e2db304bf3c493d/trainingMaterial/allegraVia/PPI/data/pdb.tar.gz) folder and go to the next step.
+At the time of writing, the crystal structure of Gadd45β is not available in the PDB. Therefore, we will use a homology model of Gadd45β. If you want to learn how to **build the homology model** of Gadd45β using HHPred (http://toolkit.tuebingen.mpg.de/hhpred), an online resource for homology modelling and more, you can follow the step-by-step [tutorial on homology modelling](./tutorial_on_homology_modelling). For the purposes of this tutorial, you can download the model provided in the [pdb](https://github.com/aidanbudd/ppisnd/blob/4eb1724d5d9ce5dbd184288b0e2db304bf3c493d/trainingMaterial/allegraVia/PPI/data/pdb.tar.gz) folder and go to the next step.
 
 ### 2. Retrieve the crystal structure of the most appropriate conformation for MKK7
 
