@@ -70,17 +70,23 @@ At the time of writing, the crystal structure of Gadd45β is not available in th
 
 ### 2. Retrieve the crystal structure of the most appropriate conformation for MKK7
 
-If you are already familiar with the Protein Data Bank (PDB) and/or want to quickly go to the next step, you can directly download the MKK7 3D structure (1DYL.pdb) provided in the [pdb](https://github.com/aidanbudd/ppisnd/blob/4eb1724d5d9ce5dbd184288b0e2db304bf3c493d/trainingMaterial/allegraVia/PPI/data/pdb.tar.gz) folder and skip the rest of this section.
+If you are already familiar with the Protein Data Bank (PDB) and/or want to quickly go to the next step, you can directly download the MKK7 3D structure (6QFL.pdb) from the [pdb](https://github.com/aidanbudd/ppisnd/blob/4eb1724d5d9ce5dbd184288b0e2db304bf3c493d/trainingMaterial/allegraVia/PPI/data/pdb.tar.gz) folder and skip the rest of this section. 6QFL was selected based on procedure and features described below.
 
-If you want to learn how to use the PDB and/or Uniprot to retrieve structural information and search for specific PDB files, you can keep     reading this section.
+If you want to learn how to use the PDB to retrieve structural information and search for specific PDB files, or want to know how 6QFL was selected, keep reading this section.
 
-The crystal structure of MKK7 is available in the **Protein Data Bank (PDB)** and we want to identify the PDB code of the most suitable conformation.
+The crystal structure of MKK7 is available in the **Protein Data Bank (PDB)** and we want to identify the PDB code of the most suitable structure. What do we mean by "most suitable structure"? It depends on the problem at hand. 
 
-This can be done a) by directly going to the PDB or b) passing through the UniProt.
+In this specific case, we want one of the *crystal structures* corresponding to UniProt AC **O14733**. As we need the structure for a docking experiment, we would like a structure with the following features:
+- high resolution (< 2.3 Angstroms)
+- not in complex with ligand(s) (otherwise we have to manually remove ligands from the PDB file before using the structure in the docking experiment)
+- ideally, in the conformation binding Gadd45β
+- ideally, we would like to work with the native protein (i.e., not a mutant)
 
-a) By directly going to the [PDB](http://www.rcsb.org/pdb/home/home.do)
+#### Procedure to select a high-resolution PDB structure for MKK7, not in complex with ligand(s): 
 
-Click on "Advanced search".
+a) Go to the [PDB](http://www.rcsb.org/pdb/home/home.do)
+
+b) Click on "Advanced search".
 In the "Choose a Query Type" drop down menu choose "UniProtKB Accession Number(s)" and paste the MKK7 UniProt AC (**O14733**) in the text box.
 Click on "Result Count". 
 
@@ -89,12 +95,15 @@ Click on "Submit Query" and inspect the structures available.
 
 **Q:** Which one seems the most appropriate for our purposes?
 
-Notice that there are three structures that have been deposited recently (2016). Examine the features of all the proteins available (are they whole proteins? are they mutants? What method whas used to determine their structure? What resolution?) and pick up one.
+Notice that there are 19 structures at the moment of updating these materials (March 2020). Examine the features of all the proteins available (are they whole proteins? are they mutants? What method was used to determine their structure? What resolution?) and check whether you can easily identify one ore more structures with the requisites listed above. 
 
-b) By passing through the UniProt
-Go to UniProt (http://www.uniprot.org), type the MKK7 UniProt AC (O14733) in the text box at the top and click on Search.
-On the result page, go to the structural information (you can scroll-down until you reach the Structure section or directly click on the "Structure" link on the left). 
-Select the RCSB PDB link destination. The structures available in the PDB for MKK7 will appear in the "Entry" column. You will have to inspect each of them (by clicking on their PDB codes) in order to decide which is the most appropriate for our purposes.
+c) Click on "Refine search".
+Use the "Advanced search" interface to get rid of structures with resolution higher than 2.2 Angstrom AND of structures that have a ligand. To this aim, you have to add a search criterium for X-Ray resolution (set resolution between 0.1 and 2.2), a search criterium for "Has ligand(s)", and a search criterium for "Has modified residue(s)".
+
+d) Click on "Submit Query".
+**Q:** Which structures fullfil all search criteria you have used? If there are more than one, pick the one with better X-Ray resolution and/or the conformation that seems more appropriate for docking needs. 
+
+e) Download the PDB file of the selected structure.
 
 
 ### 3. Identify appropriate restraints to limit the number of docking conformations
