@@ -168,16 +168,16 @@ Valuable resources for homology modelling are MODELLER and SWISS-MODEL.
 <img src= "img/swiss_model_2.png" width="50%">
 
 
-### Homology model of Gadd45β
+## Homology model of Gadd45β
 
 1) First, we have to identify the protein sequence of Gadd45β. 
-Go to UniProt (http://www.uniprot.org), type the Gadd45β UniProt AC (O75293) in the text box at the top and click on Search. On the result page, go to the sequence information (you can scroll-down until you reach the Sequence section or directly click on the "Sequence" link on the left). Click on the FASTA link and copy the sequence in FASTA format. 
+Go to UniProt (http://www.uniprot.org), type the Gadd45β UniProt AC (O75293) in the text box at the top and click on Search. On the result page, click on "Format" and choose the "FASTA (canonical)" format. Copy the sequence in FASTA format. 
 
 <img src= "img/gadd45_fasta.png" width="60%">
 
 2) Second, we have to identify a suitable template for Gadd45β. 
-Go to HHPred and paste the Gadd45β in FASTA format into the Input text box. Inspect all the Search Options (but keep the default ones).
-In the "Job Options" section, specify a Job-ID (e.g. gadd45B). Then Submit your job. The run may last up to a few minutes. However, Gadd45β is a small protein (160 aa) and the template search should be quite fast.
+Go to [HHPred]( https://toolkit.tuebingen.mpg.de/#/) and paste the Gadd45β sequence in FASTA format into the Input text box. Inspect all the Search Options (but keep the default ones).
+In the "Job Options" section, specify a Job-ID (e.g. gadd45B). Then Submit your job. The job may last up to a few minutes. However, Gadd45β is a small protein (160 aa) and the template search should be quite fast.
 
 <img src= "img/hhpred_homepage.png" width="60%">
 
