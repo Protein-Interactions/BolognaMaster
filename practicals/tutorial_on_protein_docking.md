@@ -1,7 +1,7 @@
 ---
 title: Protein-protein interaction prediction using docking
 author: Allegra Via  
-based on: a practical by D. Raimondo
+last update: March 2020
 minutes: 60 (excluding ClusPro run)
 ClusPro run: up to a few hours  
 ---
