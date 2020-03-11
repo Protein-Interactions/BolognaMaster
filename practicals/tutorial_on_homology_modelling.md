@@ -177,7 +177,7 @@ Go to UniProt (http://www.uniprot.org), type the Gadd45β UniProt AC (O75293) in
 
 2) Second, we have to identify a suitable template for Gadd45β. 
 Go to [HHPred]( https://toolkit.tuebingen.mpg.de/#/) and paste the Gadd45β sequence in FASTA format into the Input text box. Inspect all the Search Options (but keep the default ones).
-In the "Job Options" section, specify a Job-ID (e.g. gadd45B). Then Submit your job. The job may last up to a few minutes. However, Gadd45β is a small protein (160 aa) and the template search should be quite fast.
+Submit your job. The job may last up to a few minutes. However, Gadd45β is a small protein (160 aa) and the template search should be quite fast.
 
 <img src= "img/hhpred_homepage.png" width="60%">
 
@@ -186,11 +186,13 @@ In the "Job Options" section, specify a Job-ID (e.g. gadd45B). Then Submit your 
 
 <img src= "img/hhpred_template_1.png" width="50%"><img src= "img/hhpred_template_2.png" width="50%">
 
-
 * Which is the best one? 
 * Why? 
 
 4) Go to the alignment between Gadd45β and its best template and take sometime to inspect it. 
+
+<img src= "img/hhpred_template_3.png" width="50%">
+
 * Is it reliable? 
 * Do you think it might be manually improved? 
 * Has it a good coverage?
@@ -198,13 +200,14 @@ In the "Job Options" section, specify a Job-ID (e.g. gadd45B). Then Submit your 
 * What is the e-value? 
 * Are the values of these two parameters good enough to proceed with the model building?
 
-5) Once you are satisfied with the best template inspection, select it, then click on the "Create model" link immediately below the "Result, Histogram, etc." menu bar. In the resulting page, check whether the selected best template is the one that you actually selected, then click on the "Create model from manually selected template(s)" button.
-You will end up in the "Modeller" page. The target-template alignment will appear in the Input text box ("Paste multiple alignment"). 
+5) Once you are satisfied with the best template inspection, select it, then click on the "Model using selection" link in the top menu bar. This will generate a target-template alignment in PIR format.
+In the resulting page, check whether the selected best template is the one that you actually selected, then click on the "Forward to Modeller" button.
+You will end up in the "Modeller" page. The target-template alignment will appear in the Input text box. 
 
 <img src= "img/target_template_alignment.png" width="50%">
 
 
-Notice that, if you want to run a local version of Modeller, you have to copy this alignment and paste it to a local text file with .ali extension. This is NOT what we are going to do here. Here, we will use the Modeller installation provided by The Bioinformatics Toolkit. Therefore, check the options and insert a MODELLER-key (you can use "MODELIRANJE") and a name for your Job in the Job-ID text box (I suggest "gadd45B_model" or something similar). 
+Notice that, if you want to run a local version of Modeller, you have to copy this alignment and paste it to a local text file with .ali extension. This is NOT what we are going to do here. Here, we will use the Modeller installation provided by The Bioinformatics Toolkit. Therefore, check the options and insert a MODELLER-key (you can use "MODELIRANJE") and a name for your Job in the Custom Job ID text box (I suggest "gadd45B_model" or something similar). 
 
 <img src= "img/hhpred_modeller.png" width="50%">
 
