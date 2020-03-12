@@ -128,9 +128,9 @@ a) Go to the "Function" section of the UniProt entry for MKK7. Check whether the
 b) Click on the residue Position(s) and identify the **sequence context** of K149 (e.g. the three residues before and after: IAVKQMR);
 c) Starting from the position of K149 along the sequence, identify K157 and its sequence context (SGNKEEN) and R162 and its sequence context (ENKRILM);
 
-#### Identification of K149, R162, and K157 in the protein structure of MKK7 (PDB CODE: 2DYL.pdb)
-a) Go to the MKK7 PDB entry (http://www.rcsb.org/pdb/explore/explore.do?pdbId=2DYL) and click on the "Sequence" button in the menu bar. Identify the IAVKQMR sequence and the residue number corresponding to K149.
-b) With a similar procedure identify the 2DYL residue numbers corresponding to K157 and R162;
+#### Identification of K149, R162, and K157 in the protein structure of MKK7 (PDB CODE: 6QFL.pdb)
+a) Go to the MKK7 PDB entry (http://www.rcsb.org/pdb/explore/explore.do?pdbId=6QFL) and click on the "Sequence" button in the menu bar. Identify the IAVKQMR sequence and the residue number corresponding to K149.
+b) With a similar procedure identify the PDB residue numbers corresponding to K157 and R162;
 This can also be done by inspecting the PDB text file that you can display by selecting the "PDB file" option from the "Display Files" drop-down menu.
 You should also verify to which PDB chain this residues belong. Notice that 2DYL is a single chain structure .
 
@@ -141,9 +141,9 @@ For your convenience, you can find below a table summarising this information.
 
 |protein name|sequence residue num |sequence context |structure file   |structure residue num|
 |------------|:---------------------:|:-----------------:|:-----------------:|:---------------------:|
-|MKK7        |K149		   |IAVKQMR          |2DYL.pdb         |K165                 |
-|            |R162                 |ENKRILM          |2DYL.pdb         |R178                 |
-|            |K157                 |SGNKEEN          |2DYL.pdb         |K173                 |
+|MKK7        |K149		   |IAVKQMR          |6QFL.pdb         |K165                 |
+|            |R162                 |ENKRILM          |6QFL.pdb         |R178                 |
+|            |K157                 |SGNKEEN          |6QFL.pdb         |K173                 |
 |            |                     |                 |                 |                     | 
 |Gadd45β     |E65                  |IDEEEEDD	     |gadd45B_model.pdb|E65                  |				
 |            |E66		   |IDEEEEDD         |gadd45B_model.pdb|E66                  |
@@ -167,11 +167,11 @@ For your convenience, you can find below a table summarising this information.
 
 ## Down to business: modelling the Gadd45β-MKK7 complex using ClusPro
 Now we are ready to model the structure of the MKK7-Gadd45β complex. The data we are going to use are:
-1. MKK7 PDB code: 2DYL
+1. MKK7 PDB code: 6QFL
 2. The file containing the homology model for Gadd45β: gadd45B_model.pdb
 3. The restraints previously identified 
 
-a) Go to the ClusPro webpage (http://cluspro.bu.edu/home.php). Here, you may want to create an account by clicking "Sign up for an account". You will receive an email with your account details that you can use to sign in.
+a) Go to the ClusPro webpage (http://cluspro.bu.edu). Here, you may want to create an account by clicking "Sign up for an account". You will receive an email with your account details that you can use to sign in.
 b) If you don't want to create an account, click on "Use the server without the benefits of your own account". 
 c) In the ClusPro input page that will appear, you have to 
 
@@ -181,7 +181,7 @@ c) In the ClusPro input page that will appear, you have to
 
 * Set "cpu" for the Server 
  
-* insert the MKK7 PDB code (2DYL) in the Receptor text box (or upload the 2DYL.pdb file). 
+* insert the MKK7 PDB code (6QFL) in the Receptor text box (or upload the 6QFL.pdb file). 
 
  **Q:** Do we also need to specify the chain? Why?
  
@@ -219,27 +219,64 @@ Each restraint specifies a pair of residues, one from the receptor and one form 
 
 Restraints can be combined into restraint groups, and groups are combined into a restraint set, which allows users to specify some logic about how many restraints are required to be satisfied.
 
-In the "Required percent of groups" you have to specify which percentage of groups are required to be satisfied. In this case, we only have three restraints and we can put all of them in a single group. If you want the group to be satisfied you will put 100%. Notice that the minimum number of groups required is 1.
+Ideally, if a given residue from the receptor (MKK in our case) interacts with more than one residue from the ligand (gadd45b in our case), a group will composed of all the (known) interactions between that receptor residue and the different ligand residues. Each restraint will consist of the interaction between the same receptor residue and a different ligand residue. Thus, if residue A 100 from the receptor interacted with residues B 10, B 20, and B 30 from the ligand, you will create a group with 3 restraints (A 100 - B 10; A 100 - B 20; A 100 - B 30).
+A group may be made up of a single restraint, as in our case, in which we will have three groups, each with a single restraint. 
 
-In the "Required percentage of restraints" you have to specify which percentage of restraints are required to be satisfied. It is up to you to decide how much strict you want to be in filtering the solutions. If you put 100%, only solutions satisfying all the restraints will be retained. If you put 70%, 2/3 restraints must be satisfied. Etc.
+In the "Required percent of groups" you have to specify which percentage of groups are required to be satisfied. In this case, we have three groups and we can set "Required percent of groups" to 75%. Notice that the minimum number of groups required is 1.
 
-In the Receptor Residue box, you have to write the chain and the first residue number of MKK reported in the table above (A 165). Chain and residue number need to be separated by a blank space. In the Ligand Residue box you have to write the chain and the number of the Gadd45b residue (A 65) interacting with MKK 'A 165'. In the Min Distance and Max Distance boxes you have to write an acceptable distance (in Angstroms) range for the restraint to be satisfied. Then click to 'Add restraint' and fill in the text boxes with the second and the third interacting pair's information. 
+In the "Required percentage of restraints" you have to specify which percentage of restraints are required to be satisfied. It is up to you to decide how much strict you want to be in filtering the solutions. In this case, we only have one restraint per group and it would make no sense to set "Required percentage of restraints" to less than 100%.
+
+In the Receptor Residue box, you have to write the chain and the first residue number of MKK reported in the table above (A 165). Chain and residue number need to be separated by a blank space. In the Ligand Residue box you have to write the chain and the number of the Gadd45b residue (X 65) interacting with MKK 'A 165'. In the Min Distance and Max Distance boxes you have to write an acceptable distance (in Angstroms) range for the restraint to be satisfied. Then click to 'Add group' and fill in the text boxes with the second and the third interacting pair's information. 
 
 For the distance range you can try 1-5 for all the interacting pairs. 
 
-A 165 --> A 65 --> 1-5
+A 165 --> X 65 --> 1-5
 
-A 178 --> A 66 --> 1-5
+A 178 --> X 66 --> 1-5
 
-A 173 --> A 113 --> 1-5
+A 173 --> X 113 --> 1-5
 
-When you finish adding restraints, click on "Create Restraints". A piece of code will appear in the "Restraints" box below. You can copy it to a local text file with a .json suffix or use Save As...
+When you finish adding restraints, click on "Create Restraints". A piece of code will appear in the "Restraints" box below. You can copy it to a local text file with a .json suffix or use the Save As button.
 
 ```
-{"required":1,"groups":[{"required":2,"restraints":[{"type":"residue","dmax":5,"dmin":1,"rec_chain":"A","rec_resid":"165","lig_chain":"A","lig_resid":"65"},{"type":"residue","dmax":5,"dmin":1,"rec_chain":"A","rec_resid":"178","lig_chain":"A","lig_resid":"66"},{"type":"residue","dmax":5,"dmin":1,"rec_chain":"A","rec_resid":"173","lig_chain":"A","lig_resid":"113"}]}]}
+required	2
+groups	
+0	
+required	1
+restraints	
+0	
+type	"residue"
+dmax	5
+dmin	1
+rec_chain	"A"
+rec_resid	"165"
+lig_chain	"X"
+lig_resid	"65"
+1	
+required	1
+restraints	
+0	
+type	"residue"
+dmax	5
+dmin	1
+rec_chain	"A"
+rec_resid	"178"
+lig_chain	"X"
+lig_resid	"66"
+2	
+required	1
+restraints	
+0	
+type	"residue"
+dmax	5
+dmin	1
+rec_chain	"A"
+rec_resid	"173"
+lig_chain	"X"
+lig_resid	"113"
 ```
-This is the file you have to upload to ClusPro
-Restraints option. Then, you can run your job.
+
+This is the file you have to upload to ClusPro Restraints option. Then, you can run your job.
 
 ## Analysis of ClusPro results
 The goal of ClusPro results' analyses is to identify, among the large number of docking conformations, those better fullfilling the restraints you have imposed. First, we have to navigate the ClusPro output page and identify sets of solutions ("models") we will download and further inspect. 
