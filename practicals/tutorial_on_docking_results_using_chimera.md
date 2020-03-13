@@ -42,7 +42,7 @@ The default initial display is ribbons. To also display atoms:
 ```
     Actions→Atoms/Bonds→show
 ```
-This shows all of the atoms and bonds in the structure, except that those in the peptide backbone are suppressed by the ribbon display. How to indicate specific parts of a structure for display, coloring, etc. is discussed below. Initially, heteroatoms (atoms other than carbon) are color-coded by element: oxygens red, nitrogens blue, etc. The carbons retain the model color, in this case tan.
+This shows all of the atoms and bonds in the structure, except that atoms in the peptide backbone are suppressed by the ribbon display. How to indicate specific parts of a structure for display, coloring, etc. is discussed below. Initially, heteroatoms (atoms other than carbon) are color-coded by element: oxygens red, nitrogens blue, etc. The carbons retain the model color, in this case tan.
 
 Hide ribbons to reveal the backbone atoms, then show ribbons again:
 
@@ -65,7 +65,7 @@ When the mouse focus is in the graphics window (you may need to click into it if
 
     *res-name  res-num.chain  atom-name*
 
-You can see from the balloons that this structure contains two peptide chains, A and "No ID", and no water (HOH residues).
+You can see from the balloons that this structure contains two peptide chains, A and X, and no water (HOH residues).
 
 ## Selection with the mouse
 
@@ -109,7 +109,7 @@ Select menu choices also include chain ID, element, and many other categories of
     Select→Clear Selection
     Actions→Atoms/Bonds→stick
 ```
-Now, we want to select MKK7 Lys149 (2DYL: K165), R162 (2DYL: R178) and Lys157 (2DYL: K173), and Gadd45β Glu65 (gadd45B_model.pdb: E65), Glu66 (gadd45B_model.pdb: E66), and Glu113 (gadd45B_model.pdb: E113).
+Now, we want to select MKK7 Lys149 (6QFL: K165), R162 (6QFL: R178) and Lys157 (6QFL: K173), and Gadd45β Glu65 (gadd45B_model.pdb: E65), Glu66 (gadd45B_model.pdb: E66), and Glu113 (gadd45B_model.pdb: E113).
 
 First, notice that in the ClusPro model, MKK7 corresponds to Chain A, whereas Gadd45β corresponds to "no ID" or "principal chain". 
 
