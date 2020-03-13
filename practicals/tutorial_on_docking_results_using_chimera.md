@@ -7,16 +7,25 @@ minutes: 1h30
 
 ------------
 
-> ## Learning Objectives
+> ## Learning Outcomes
 >
 > * Learners can describe Chimera's basic features
 > * Learners can upload a structure (e.g. a ClusPro model)
 > * Learners can select one or more residues
 > * Learners can calculate atomic distances
+> 
+> 
+> ## Goal of this task
+> The goal of this tutorial is to upload ClusPro models and identify best solutions through a visual study of different models. 
+> Each model contains an MKK7-Gadd45B complex, therefore, you have to select each structure and use different colors to distinguish them. Then, you have to select interacting residues and see whether they are close enough to interact, by calculating distances. 
+> From the biological background (tutorial on docking), you should be able to see whether a solution is potentially a good solution.
+> You should also be able to see the differences between different solutions.
 
 ------------
 
 This tutorial is adapted from the [UCSF Chimera - Getting Started Tutorial](https://www.cgl.ucsf.edu/Outreach/Tutorials/GettingStarted.html)
+
+
 
 # Getting started
 You can interact with Chimera using menus and/or commands. The basic features of Chimera are available either way, but not all command functions are available in menus or graphical interfaces, and not all menu or graphical interface functions are available in commands. Thus, it is useful to become familiar with both ways of interacting with Chimera.
@@ -111,9 +120,9 @@ Select menu choices also include chain ID, element, and many other categories of
 ```
 Now, we want to select MKK7 Lys149 (6QFL: K165), R162 (6QFL: R178) and Lys157 (6QFL: K173), and Gadd45β Glu65 (gadd45B_model.pdb: E65), Glu66 (gadd45B_model.pdb: E66), and Glu113 (gadd45B_model.pdb: E113).
 
-First, notice that in the ClusPro model, MKK7 corresponds to Chain A, whereas Gadd45β corresponds to "no ID" or "principal chain". 
+First, notice that in the ClusPro model, MKK7 corresponds to Chain A, whereas Gadd45β corresponds to Chain X. 
 
-One way to select specific residues or ranges of residues is in the Sequence tool: menu *Favorites→Sequence*, *show sequence for model.000.00.pdb (#0) chain A* (for MKK7) or *model.000.00.pdb (#0) principal chain* (for Gadd45β). 
+One way to select specific residues or ranges of residues is in the Sequence tool: menu *Favorites→Sequence*, *show sequence for model.000.00.pdb (#0) chain A* (for MKK7) or *model.000.00.pdb (#0) chain X* (for Gadd45β). 
 When the sequence window has mouse focus, placing the cursor over a residue symbol in the sequence shows information for the corresponding structure residue at the bottom of the window. Click-drag a box within the sequence window to select one or more residues (as opposed to simply clicking within the light yellow box, which will select the entire helix).
 
 If you want to select residues or group of residues that are not adiacent in the sequence, you can use Shift-drag to add them to the initial selection. Thus, if you want to select MKK7 K165, R178, and K173, you have to select one of them, then you can add the other two by using Shift-drag.
@@ -198,12 +207,10 @@ Tools > Structure analysis > distances
 
 This opens the ```Distances``` panel of ```Structure Measurements``` which is a table of distance monitors (measurements that update if there are changes). Distance monitors are saved in sessions. 
 
-Distance monitors can be created in several ways:
+Distance monitors can be created as follows:
 
 1) Selecting exactly two atoms, then clicking the Create button on the dialog. With default mouse settings, two atoms can be picked (selected from the graphics window) by Ctrl-clicking the first and Shift-Ctrl-clicking the second.<br>
-2) Doubleclick-picking an atom when one other atom is already selected, then choosing Show Distance from the resulting context menu.<br>
-3) Doubleclick-picking an atom when 0 or >3 other atoms are already selected, then choosing Show Distances to Nearby Residues from the resulting context menu.<br>
-4) Using the distance command (see below).
+2) Using the distance command (see below, section on how to work with the command line).
 
 
 ## Models and model status
