@@ -1,0 +1,120 @@
+---
+title: Serching Protein Interactions in the IntAct database
+authors:  Allegra Via 
+based on: IntAct documentation and EMBL-EBI train online
+minutes: 30
+---
+
+------------
+
+> ## Learning Outcomes
+> Learners will be able to:
+> * use IntAct to find interaction partners of an input protein of interest
+> * visualise the interaction network of an input protein 
+> * download the results of their search 
+> 
+> ## The aim of the task
+> The aim of this tutorial is to give learners the chance to explore the IntAct database and practice searches.
+
+------------
+## Background 
+> From Train online @ EMBL-EBI: [Protein interactions and their importance](https://www.ebi.ac.uk/training/online/course/protein-interactions-and-their-importance/molecular-interaction-databases-embl-ebi)
+> 
+
+IntAct is a central, public repository where molecular interactions data can be stored and accessed. It is hosted by the European Bioinformatics Institute (EMBL-EBI) in Hinxton, UK, where it is maintained by a group of curators and developers.
+
+IntAct is populated with interaction data from literature curation or direct user submissions. Most of the data refer to protein-protein interactions, but interactions involving other types of molecules, such as small chemical compounds or nucleic acids, can also be found in IntAct.
+
+At EMBL-EBI IntAct is the main database for molecular interactions. There are other EMBL-EBI databases that also capture interaction information, the most prominent one being ChEMBL, which hosts a large collection of small molecule-protein/drug-target interactions.
+
+IntAct is a member of the International Molecular Exchange (IMEx) Consortium - a group of major public interaction data providers whose goal is to share curation effort and exchange completed records on molecular interaction data. When you query data in IntAct you also access over 150 million interactions in a further 31 data resources via our PSICQUIC (Proteomics Standard Initiative Common QUery InterfaCe) service or a consistently annotated, non-redundant, experimentally determined subset from the IMEx Consortium.
+
+You can learn more about IntAct  in a separate course: [IntAct: Molecular Interactions at the EBI](https://www.ebi.ac.uk/training/online/course/intact-molecular-interactions-ebi).
+
+MINT and IntAct databases are two of the largest databases (number of manuscripts curated and the number of non-redundant interactions). Both adopted the highest possible data quality standards. 
+
+IntAct and MINT were founder members of the IMEx Consortium.
+
+IntAct and MINT joined forces to create a single resource to improve curation and software development efforts. 
+
+Data maintenance, and the PSICQUIC and IMEx web services are the responsibility of the IntAct team, while the curation effort is undertaken by both IntAct and MINT curators. 
+
+### Searching IntAct
+
+In this training session you will search the IntAct database. You will perform different searches, check the number of interaction evidences supporting each search, look for the experimental details of a specific interaction, and download data using different formats.
+
+Go to the [IntAct website](http://www.ebi.ac.uk/intact/).
+
+
+#### Step1: Search
+In the search panel, it is possible to type: protein name, gene name, Accession Numbers, GO term, publication ID, authors name, experimental detection method, etc. 
+
+In this exercise you will perform a simple search and look at your results in the IntAct viewer. 
+
+You may perform the exercise below or alternatively, you may try a protein you are interested in. 
+
+Open the IntAct homepage in a web browser. Type in the Quick Search textbox ‘MEKK1’ and click on the Search button.
+
+**Q1: How many binary interactions can you find?**
+
+Searching on a non-specific gene name will bring you up a mixed set of results. You can refine your search either by going back to the main page or by clicking on Advanced Search button in the menu bar at the top of the page, even if you will use it now for a simple search. Refine your search using either Q13233 or M3K1_HUMAN. 
+
+**Q2: How many binary interactions do you find by refining the search?** 
+
+Go to the detailed view of the MEKK1 (Q13233) / BRAF (P15056) interaction that has "Protein Kinase assay" as Interaction detection Method.
+
+**Q3: Which of these proteins acts as enzyme in this reaction?** 
+
+**Q4: What is the stoichiometry?** 
+ 
+#### Step2: Refining your search using the Advanced Search
+
+Using the Molecular Interaction Query Language (MIQL), available from the search panel, it is possible to perform more complex queries. This will allow you to write complex queries.
+
+Example: To discover if there is any interaction available in the database between Plasmodium falciparum (isolate 3D7) and human proteins: a) Clear all previous searches b) Type ‘taxidA:36329 AND taxidB:9606’.
+
+Clicking on Advanced search and then on Show Advanced Fields (on the right of the Search textbox in the IntAct homepage) opens up the Advanced Search options. Here, you can specify one or more fields you wish to search in, and build a complex query as you progress. For example, you can clear the previous search and use the Show Advanced Fields to search for ‘organism’ = human AND ‘Interaction detection method’ = surface plasmon resonance.
+
+You can start with the first search (Advanced search > Show Advanced Fields > organism > human > Add & Search). In the result page, you can click on "Advanced" at the top right of the page. You will end up in a partially filled (with your initial search) Advanced search input page. Here, you can add further Advanced Fields options:
+
+Advanced search > Show Advanced Fields > Interaction detection method > surface plasmon resonance > Add & Search
+
+Read carefully "Search Tips" and have a look at the "MIQL syntax".
+
+**Q5: How many interactions can you see for ‘organism’ = human AND ‘Interaction detection method’ = two hybrid?** 
+
+**Q6: How many interactions do you see for P53_HUMAN AND ‘Interaction type’ = physical?** 
+
+**Q7: How many interactions do you see for ABL1_HUMAN AND interactor type = direct interaction?** 
+
+Go to the detailed view of the ABL1_HUMAN (P00519) / P41 (EBI-7094147) interaction that has isothermal titration calorimetry as “Interaction detection Method”: 
+
+**Q8: Which are the Interaction Parameters associated to this interaction?** 
+
+Go back to the interaction list of the previous search and go to the detailed view of the ABL1_HUMAN (P00519) / P41 (EBI-7094147) interaction that has X-ray crystallography as “Interaction detection Method". 
+
+**Q9: Which are the "Experimental Features" of this interaction for both interactors? Which binding site and which mutation(s)?**
+
+#### Step3: visualise interactions as a network
+Go to the search page and type the PMID: 22014111. 
+
+**Q10: How many interactions can you find?**
+
+Click on the Graph button in the bar menu at the top of the page. You may need to install Flash in order to see the network.
+
+
+#### Step4: Download data
+
+**Q11: Download all the PPIs associated to this PMID as XGMML format.**
+
+If you have time, you can also try the following: 
+
+Search for all the human PPIs present in IntAct using the quick or advanced search.
+**Q12: Download the interactions found as PSI-MI xml and MITAB 2.7**
+
+Go to the Download page and download all the PPIs from the “Virus” dataset in PSI2.5 format. 
+
+**Q13: How many articles are associated to this dataset? How many interactions?** 
+
+
+
