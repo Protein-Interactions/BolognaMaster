@@ -19,19 +19,50 @@ minutes: 30
 ------------
 ## Background
 
-STRING (https://string-db.org) is a database of known and predicted protein-protein interactions. The interactions include direct (physical) and indirect (functional) associations; they stem from computational prediction, from knowledge transfer between organisms, and from interactions aggregated from other (primary) databases.
+### The STRING database
 
-Data Sources
-Interactions in STRING are derived from five main sources:
+[STRING]((https://string-db.org)) (Search Tool for the Retrieval of Interacting Genes/Proteins) is an online database and search tool for retrieval of interactions involving proteins; interactions include direct (physical) and indirect (functional) associations between proteins; they stem from computational prediction, from knowledge transfer between organisms, and from interactions aggregated from other (primary) databases.
+Data are derived from five main sources:
 
-- Genomic Context Predictions	
-- High-throughput Lab Experiments	
-- (Conserved) Co-Expression	
-- Automated Textmining	
+- genomic analysis (Genomic Context Predictions)
+- high-throughput lab experiments
+- (conserved) coexpression experiments
+- previous knowledge from public text collections (OMIM, PubMed) - via automated text minind
 - Previous Knowledge in Databases
 
-Coverage
+It is a secondary database, that is a curated database consisting of data derived from analysis of DNA sequences, protein sequences, and structures (from resources like DIP, KEGG, GO and BioGRID).
+The database is collectively curated by EMBL, CPR and KU (Copenhagen), SIB, TUD (Dresden), and UZH (Zurich); it covers 9643763 proteins from 2031 different organisms.
+Online data search and most flat files are free under Creative Commons License, but the full database and resources are released under license requirements for commercial uses; institutions can ask for customized data collections behind payment.
+
+It has two sister projects based on the data contained in STRING:
+• STITCH, a database of chemical-protein interactions
+• EggNOG, a database for functional annotation of orthologous groups.
+
+
+#### Coverage
 The STRING database currently (March 2020) covers 24'584'628 proteins from 5'090 organisms.
+
+
+### How to do perform a search using STRING
+
+From the main page of STRING, you can perform a search:
+
+- by name
+- by sequence
+- by multiple names
+- by multiple sequences
+
+In the first case, the user can insert the common name of the protein of interest, its scientific name or any accession number from other databases. 
+
+In the second case, a sequence in FASTA format is required. 
+
+In both instances, the search returns a network of proteins that are involved in primary AND secondary interactions with the query; the visualized network is a summary network by default and emphasizes with different colors the different pieces of evidence that support each specific interaction (for example experimental proof, inference by homology, presence in literature etc). 
+
+By clicking different buttons at the bottom of the image, specific networks and relations based on phylogenetics can be highlighted; the buttons indicated by plus and minus symbols allow the user to focus on smaller or larger networks by adding or eliminating nodes, based on a ranking that represents the cumulative degree of confidence that each specific PPI actually exists. 
+
+The multiple searches allow instead to define real and putative interactions limited to the set of proteins fed to the system by the user. There is also the possibility to search for COGs (clusters of orthologous groups, that is a phylogenetic classification of similar proteins in different species) instead of simple protein interactions. 
+
+For every search performed in any chosen visualization of the network, in a box under the image a full explanation of what you are viewing is given, together with a set of variables that can be modified in order to customize the network and highlight specific contents. Clicking on the name of an interacting partner redirects to a specific page where info about identity, function and protein sequence are given, together with their UniProt accession number and external links to NCBI, Ensembl, KEGG, UniProt, the Yeast Genome Project and many other databases.
 
 You will work with the following four genes in *Homo sapiens*:
 
@@ -47,7 +78,7 @@ ERBB3 is a surface tyrosine kinase receptor for the binding of neuregulins. Acti
 **ERBB4 (ERBB4_HUMAN)** <br>
 ERBB4 is a tyrosine kinase receptor that binds EGF factors and neuregulines and is involved in proliferation and apoptosis. It acts in processes such as the development of heart tissue and the nervous system.
 
-If you want to learn more about these genes, their biological function and the relation among them, you can use resources you know (Uniprot, PubMed, IntAct). 
+If you want to learn more about these genes, their biological function and the relation among them, you can use resources you already know (Uniprot, PubMed, IntAct). 
 
 
 ### Searching STRING
