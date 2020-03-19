@@ -35,16 +35,16 @@ The STRING database currently (March 2020) covers 24'584'628 proteins from 5'090
 
 You will work with the following four genes in *Homo sapiens*:
 
-**EGFR (EGFR_HUMAN)**
+**EGFR (EGFR_HUMAN)** <br>
 EGFR is an epidermal growth factor receptor and tyrosine kinase receptor that binds EGF factors to activate signal transduction cascades, converting external stimuli into cellular responses
 
-**ERBB2 (ERBB2_HUMAN)**
+**ERBB2 (ERBB2_HUMAN)** <br>
 ERBB2 is a tyrosine kinase receptor that is part of receptor complexes present on the cell surface. For its activation it seems to require the presence of a co-receptor. It is capable of binding neuregulins and regulates transcription in the nucleus
 
-**ERBB3 (ERBB3_HUMAN)**
+**ERBB3 (ERBB3_HUMAN)** <br>
 ERBB3 is a surface tyrosine kinase receptor for the binding of neuregulins. Activation is due to binding to neuregulin-1. It is involved in the regulation of myeloid cell differentiation.
 
-**ERBB4 (ERBB4_HUMAN)**
+**ERBB4 (ERBB4_HUMAN)** <br>
 ERBB4 is a tyrosine kinase receptor that binds EGF factors and neuregulines and is involved in proliferation and apoptosis. It acts in processes such as the development of heart tissue and the nervous system.
 
 If you want to learn more about these genes, their biological function and the relation among them, you can use resources you know (Uniprot, PubMed, IntAct). 
