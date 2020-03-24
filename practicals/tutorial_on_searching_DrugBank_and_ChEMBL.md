@@ -43,10 +43,8 @@ Using ```Browse > Drugs``` and/or ```Browse > Drug targets``` try to find out th
 	a. Do the two molecules have the same pharmacodynamics features?
 - Mechanism of action
 	a. Do the two molecules have the same mechanism of action?
-- Targets
-	a. Do the two molecules have Targets in common? If yes, which one(s)?
-- Experimental targets
-	a. Do the two molecules have Enzymes in common? If yes, which one(s)?
+- Interaction partners
+	a. Do the two molecules have interaction partners in common? If yes, which one(s) are "Targets" and which "Enzymes"? In order to retrieve this information you have to go to ```Browse > Drug targets``` and query the database by drug name. 
 - Toxicity in pregnancy and nursing
 	a. Are the two molecules equally toxic/non toxic?
 - Chemical structure
