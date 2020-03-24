@@ -9,9 +9,11 @@ minutes: 45
 
 > ## Learning Outcomes
 > Learners will be able to:
-> * use IntAct to find interaction partners of an input protein of interest
-> * visualise the interaction network of an input protein 
-> * download the results of their search 
+> 
+> * describe the content of DrugBank and ChEMBL
+> * compare the characteristics of somehow similar but different drugs using information stored in DrugBank
+> * make keyword queries in DrugBank and ChEMBL
+> * draw the structure of a molecule and use it for similarity searches in DrugBank and ChEMBL 
 > 
 > ## The aim of this tutorial
 > The aim of this tutorial is to give learners the chance to explore the DrugBank and ChEMBL databases and learn what kind of information they can find in these two databases.
